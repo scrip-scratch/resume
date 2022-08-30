@@ -1,14 +1,6 @@
 @media (max-width: 1400px) {
-    .side_menu {
-        top: 1rem;
-        a {
-            width: 2.5rem;
-            height: 2.5rem;
-        }
-    }
     .side_menu_showed {
         left: 0.7rem;
-        top: 1rem;
     }
 }
 
@@ -51,6 +43,13 @@
 @media (max-width: 1000px) {
     html {
         font-size: 13px;
+    }
+    .side_menu {
+        .button_up {
+            &:hover {
+                fill: $color_text;
+            }  
+        }
     }
 }
 
@@ -165,32 +164,22 @@
 
 @media (max-width: 570px) {
     html {
-        font-size: 9px;
-    }
-}
-
-@media (max-width: 470px) {
-    html {
-        font-size: 9px;
+        font-size: 10px;
     }
     .hello {
         position: relative;
         display: flex;
         width: 100%;
         .hello_image {
-            position: absolute;
-            left: 0;
-            top: 1rem;
-            width: 7rem;
-            z-index: 5;
+            display: none;
         }
         .hello_cards {
             width: 100%;
-            .card_header {
-                padding-left: 5rem;
-            }
         }
     }
+}
+
+@media (max-width: 470px) {
     .web  {
         margin-bottom: 0;
         .web_items {
@@ -209,22 +198,5 @@
     }
 }
 
-@media (max-width: 390px) {
-    html {
-        font-size: 8px;
-    }
-}
-
-@media (max-width: 340px) {
-    html {
-        font-size: 7.5px;
-    }
-}
-
-@media (max-width: 300px) {
-    html {
-        font-size: 7px;
-    }
-}
 
 

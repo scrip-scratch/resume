@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     padding: 3rem;
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     gap: 1.2rem;
     .card_header {
         color: $color_accent_strong;
@@ -31,11 +31,12 @@
             overflow: hidden;
             border-radius: 3.125rem;
             box-shadow: $block_shadow;
+            position: relative;
             .cards_row {
                 width: 100%;
                 display: flex;
                 position: relative;
-                transition: all .2s;
+                transition: left .2s ease-out;
                 left: 0; 
             }
             .card {

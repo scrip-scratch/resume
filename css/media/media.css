@@ -141,15 +141,3 @@
     width: 100%; }
   .gd .gd_skills {
     width: 100%; } }
-
-@media (max-width: 390px) {
-  html {
-    font-size: 8px; } }
-
-@media (max-width: 340px) {
-  html {
-    font-size: 7.5px; } }
-
-@media (max-width: 300px) {
-  html {
-    font-size: 7px; } }
