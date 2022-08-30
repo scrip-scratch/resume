@@ -1,0 +1,241 @@
+:root {
+    --font-light: "DinPro_300";
+    --font-reg: "DinPro_400";
+    --font-med: "DinPro_500";
+    --font-bold: "DinPro_700";
+
+    --main-bg-color: #F2F2F2;
+    --btn-color: #F46D40;
+    --main-text-color: #111111;
+    --sec-text-color: #A4ACAD;
+}
+
+@media (max-width: 1150px ) {
+
+}
+
+@media (max-width: 1400px) {
+        .wrapper {
+            grid-template-columns: minmax(200px, 1fr) minmax(600px, 3fr);
+        }
+        /* Mobile Header */
+        .header {
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px 15px;
+            height: 56px;
+        }
+        .header__links {
+            display: none;
+        }
+        .header__info {
+            order: -1;
+        }
+        .header__phones-regime {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 0;
+            border-right: none;
+            transition: all .2s;
+            position: relative;
+            right: 0;
+        }
+        .header__phones-regime_hidden {
+            position: relative;
+            transform: translateY(-100px);
+            transition: all .2s;
+        }
+        .header__phones {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: var(--font-med);
+            font-size: 12px;
+            border: none;
+        }
+        .header-phones__text {
+            color: var(--main-text-color);
+            font-size: 12px;
+        }
+        .header__phone {
+            color: var(--btn-color);
+            line-height: 14px;
+        }
+        .header__regime {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: var(--font-med);
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            width: 87px;
+            gap: 0;
+        }
+        .header__regime img {
+            width: 15px;
+            height: 15px;
+        }
+        .header__search {
+            margin: 0;
+        }
+        .header__cart {
+            display: flex;
+            margin-left: 25px;
+            align-items: center;
+        }
+        .header__cart svg path {
+            stroke: var(--btn-color);
+        }
+        .cart {
+            display: none;
+        }
+}
+
+@media (max-width: 500px) {
+    .menu, .cart, .main-banner, .news-slider {
+        display: none;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__container {
+        padding: 0 15px;
+    }
+    /* Mobile Header */
+    .header__logo-mobile {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    /* Mobile Карточки */
+    .menu__cards {
+        margin: 20px 0 20px;
+        display: grid;
+        grid-template-areas: 'pizza sets' 'wok rolls' 'sushi soups' 'salads drinks' 'combos combos' 'eel corndog' 'chicken chicken' 'sales sales';
+        grid-template-rows: repeat(8, 160px);
+        gap: 10px;
+        padding: 0 15px;
+        width: 100%;
+    }
+    .card__pizza, .card__soups, .card__sets, .card__wok, .card__salads, .card__rolls, .card__sushi, .card__combos_big, .card__drinks {
+        display: block;
+    }
+    .card__pizza_big {
+        display: none;
+    }
+    .card__pizza {
+        background: url(../images/menu_cards/card_pizza.png) 0 / cover no-repeat;
+        grid-area: pizza;
+    }
+    .card__sets {
+        background: url(../images/menu_cards/card_sets.png) 0 / cover no-repeat;
+        grid-area: sets;
+    }
+    .card__wok {
+        background: url(../images/menu_cards/card_wok.png) 0 / cover no-repeat;
+        grid-area: wok;
+    }
+    .card__rolls {
+        background: url(../images/menu_cards/card_rolls.png) 0 / cover no-repeat;
+        grid-area: rolls;
+    }
+    .card__sushi {
+        background: url(../images/menu_cards/card_sushi.png) 0 / cover no-repeat;
+        grid-area: sushi;
+    }
+    .card__soups {
+        background: url(../images/menu_cards/card_soups.png) 0 / cover no-repeat;
+        grid-area: soups;
+    }
+    .card__salads {
+        background: url(../images/menu_cards/card_salads.png) 0 / cover no-repeat;
+        grid-area: salads;
+    }
+    .card__drinks {
+        background: url(../images/menu_cards/card_drinks.png) 0 / cover no-repeat;
+        grid-area: drinks;
+    }
+    .card__combos_big {
+        background: url(../images/menu_cards/card_combos.png) 0 / cover no-repeat;
+        grid-area: combos;
+    }
+    /* Mobile Информация */
+    .main__info {
+        margin: 20px 0;
+        color: var(--sec-text-color);
+        position: relative;
+        width: 100%;
+    }
+    .info__article {
+        height: 200px;
+        overflow: hidden;
+        transition: all .2s;
+    }
+    .info__blur {
+        height: 35%;
+        bottom: 50px;
+    }
+    .info__more {
+        bottom: 50px;
+    }
+    /* Mobile Footer */
+    .footer {
+        border-top: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        width: 100%;
+    }
+    /* Mobile Footer Ссылки */
+    .footer__list {
+        display: none;
+    }
+    /* Mobile Footer Заказать звонок */
+    .footer__callback {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        max-width: 100%;
+        border-right: none;
+    }
+    .callback__label {
+        display: none;
+    }
+    .callback__input {
+        display: none;
+    }
+    .callback-social__links {
+        margin-bottom: 30px;
+    }
+    /* Mobile Footer Контакты */
+    .footer__contacts {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .mobile-footer__nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #fff;
+        border-top: 0.5px solid #A4ACAD;
+    }
+    .mobile-footer__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        font-family: var(--font-med);
+        color: var(--main-text-color);
+        font-size: 17px;  
+    }
+}

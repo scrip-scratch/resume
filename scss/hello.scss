@@ -1,0 +1,62 @@
+@mixin card {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    font-size: 1.375rem;
+    gap: 1.2rem;
+    .card_header {
+        color: $color_accent_strong;
+        font-weight: 500;
+    }
+}
+
+.hello {
+    display: grid;
+    grid-template-columns: 40% 57%;
+    column-gap: 3%;
+    padding: 3.75rem 0;
+    .hello_image {
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .hello_cards {
+        display: flex;
+        flex-direction: column;
+        .cards_slider {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 3.125rem;
+            box-shadow: $block_shadow;
+            .cards_row {
+                width: 100%;
+                display: flex;
+                position: relative;
+                transition: all .2s;
+                left: 0; 
+            }
+            .card {
+                @include card;
+            }  
+        }
+        .cards_dots {
+            display: flex;
+            gap: 1.1rem;
+            align-self: self-end;
+            padding: 2.5rem 3rem;
+            .cards_dot {
+                width: 1rem;
+                height: 1rem;
+                background-color: $color_text;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .cards_dot_active {
+                background-color: $color_accent_light;
+            }
+        }
+    }
+}

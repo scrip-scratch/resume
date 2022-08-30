@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+$font: "Rubik";
+
+$color_bg: #FBFBFF;
+$color_text: #757575;
+$color_accent_strong: #0B4F6C;
+$color_accent_light: #01BAEF;
+
+$block_shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+
+$wrap: 1320px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: $font;
+    font-weight: 400;
+    color: $color_text;  
+    background-color: $color_bg;
+    position: fixed;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    font-weight: 500;
+}
+
+a {
+    color: $color_accent_light;
+    &:visited {
+        color: $color_accent_strong;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: $wrap;
+    margin: 0 auto;
+    padding: 0 3.75rem;
+    
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+.label {
+    font-size: 1rem;
+}
+
+@mixin svg_link {
+    width: 3rem;
+    height: 3rem;
+    svg {
+        fill: $color_text;
+        &:hover {
+            fill: $color_accent_light;
+        }
+        &:active {
+            transform: scale(.95);
+        }
+    }
+}
+
+.side_menu {
+    position: fixed;
+    left: -10%;
+    top: 5rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all .2s;
+    .button_up {
+        transform: rotate(-90deg);
+        fill: $color_text;
+        &:hover {
+            fill: $color_accent_light;
+        }
+        &:active {
+            transform: rotate(-90deg) scale(.95);
+        }
+    }
+    a {
+        @include svg_link;
+    }
+}
+.side_menu_showed {
+    left: 5%;
+    top: 5rem;
+}
+
+@import './header.scss';
+@import './hello.scss';
+@import './skills.scss';
+@import './footer.scss';
+
+@import './media/media.scss';
+
+.loader_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 100vh;
+    background: $color_bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.1s;
+    .loader {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        div {
+            position: absolute;
+            border: 4px solid $color_accent_light;
+            opacity: 1;
+            border-radius: 50%;
+            animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        div:nth-child(2) {
+            animation-delay: -0.5s;
+        }
+    }
+    @keyframes lds-ripple {
+        0% {
+          top: 36px;
+          left: 36px;
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+        4.9% {
+          top: 36px;
+          left: 36px;
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+        5% {
+          top: 36px;
+          left: 36px;
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+        100% {
+          top: 0px;
+          left: 0px;
+          width: 72px;
+          height: 72px;
+          opacity: 0;
+        }
+    }
+}
+
+.image_view_wrap {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.226);
+    .image_view_block {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .image_view {
+            max-width: 85%;
+            min-width: auto;
+            max-height: 80%;
+            min-height: auto;
+            object-fit: cover;
+            object-position: center;
+            margin: auto;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+        }
+    }
+}

@@ -1,0 +1,190 @@
+@mixin image_block($br) {
+    border-radius: $br;
+    box-shadow: $block_shadow;
+    overflow: hidden;
+}
+
+@mixin small_image($top) {
+    position: absolute;
+    right: 15px;
+    top: $top;
+}
+
+@mixin image_hover {
+    transition: all .5s;
+    &:hover {
+        transform: translate(5px, 2px) scale(1.05);
+    }
+}
+
+@mixin web_item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    .web_item-images {
+        height: 80%;
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        .web_item-image_desktop {
+            @include image_block(3.125rem);
+            @include image_hover;
+            height: 100%;
+            width: 100%;
+        }
+        .web_item-image_mobile {
+            @include image_block(1rem);
+            @include small_image(65%);
+            width: 167px;
+            height: 266px;
+            @include image_hover;
+        }
+        .web_item-image_tablet {
+            @include image_block(1rem);
+            @include small_image(50%);
+            width: 304px;
+            height: 435px;
+            @include image_hover;
+        }
+    }
+    .web_item-desc {
+        padding: 0 30px;
+    }
+}
+
+@mixin skill_image {
+    width: 6.2rem;
+    height: 6.2rem;
+    flex-shrink: 0;
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.web {
+    margin-bottom: 9rem;
+    .web_header {
+        padding-left: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    .web_items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4.5rem;
+        align-items: center;
+        .web_item {
+            @include web_item;
+        }
+        .web_item:nth-child(3) {
+            grid-column: 1/3;
+            grid-row: 2;
+            padding: 0 2.5rem;
+        }
+    }
+}
+
+.web-skills {
+    margin-bottom: 8rem;
+    .web-skills_header {
+        margin-bottom: 3rem;
+    }
+    .web-skills_items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        .skills_item {
+            display: flex;
+            gap: 1rem;
+            .skills_image {
+                @include skill_image;
+            }
+            .skills_text {
+                font-size: 1.2rem;
+            }
+            .skills_accent {
+                color: $color_accent_strong;
+            }
+        }
+    }
+}
+
+.gd {
+    .gd_header {
+        margin-bottom: 1.5rem;
+    }
+    .gd_svetofor {
+        padding: 0 2rem;
+        margin-bottom: 1.5rem;
+        .gd_svetofor_images {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, .5fr);
+            gap: 1.5rem;
+            .svetofor_1 {
+                grid-column: 1/3;
+                grid-row: 1/5;
+            }
+            .svetofor_2 {
+                grid-column: 3/5;
+                grid-row: 1/5;
+                object-fit: contain;
+            }
+            .svetofor_3 {
+                grid-column: 5/6;
+                grid-row: 1/2;
+            }
+            .svetofor_4 {
+                grid-column: 5/6;
+                grid-row: 2/3;
+            }
+            .svetofor_5 {
+                grid-column: 5/6;
+                grid-row: 3/4;
+            }
+            img {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .gd_more_images {
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        img {
+            cursor: pointer;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .gd_skills {
+        margin-top: 3rem;
+        .skills_item {
+            display: flex;
+            gap: 1rem;
+            .skills_image {
+                @include skill_image;
+            }
+            .skills_text {
+                font-size: 1.2rem;
+            }
+            .skills_accent {
+                color: $color_accent_strong;
+            }
+        }
+    }
+}

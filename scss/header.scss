@@ -1,0 +1,23 @@
+.header {
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #75757581;
+    .header_logo {
+        width: 10rem;
+        height: auto;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .header_links {
+        display: flex;
+        gap: 15px;
+        a {
+            @include svg_link;
+        }
+    }
+}

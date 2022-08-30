@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/media.css">
+    <title>ROMSEM</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Меню -->
+        <aside class="menu">
+            <!-- Меню логотип -->
+            <div class="menu__logo">
+                <!-- Логотип -->
+                <div class="logo__image">
+                    <img src="./images/logo.png" alt="ROMSEM Логотип">
+                </div>
+                <!-- Название -->
+                <h3 class="logo__name">
+                    ROMSEM
+                </h3>
+            </div>
+            <!-- Меню навигация -->
+            <nav class="menu__nav">
+                <ul class="menu__list">
+                    <!-- Пицца -->
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_pizza.png"   alt="Пицца">
+                            <p>Пицца</p>
+                        </a>
+                    </div>                    
+                    <!-- Сеты -->
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_sets.png" alt="Сеты">
+                            <p>Сеты</p>
+                        </a>
+                    </div>                    
+                    <!-- WOK -->
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_wok.png" alt="WOK">
+                            <p>WOK</p>
+                        </a>
+                    </div>                    
+                    <!-- Роллы -->
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_rolls.png"   alt="Роллы">
+                            <p>Роллы</p>
+                        </a>
+                    </div>                    
+                    <!-- Суши -->
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_sushi.png"   alt="Суши">
+                            <p>Суши</p>
+                        </a>
+                    </div>
+                    <!-- Салаты -->
+                    <div class="menu__item menu_soon">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_salads.png"  alt="Салаты">
+                            <p>Салаты</p>
+                        </a>
+                    </div>                    
+                    <!-- Супы -->
+                    <div class="menu__item menu_soon">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_soups.png"   alt="Супы">
+                            <p>Супы</p>
+                        </a>
+                    </div>
+                    <!-- Корн доги -->
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_corndogs.png"    alt="Корн доги">
+                            <p>Корн доги</p>
+                        </a>
+                    </div>
+                    <!-- Напитки -->
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_drinks.png"  alt="Напитки">
+                            <p>Напитки</p>
+                        </a>
+                    </div>                    
+                    <!-- Акции -->
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">
+                            <img src="./images/menu_links/menu_sales.png"   alt="Акции">
+                            <p>Акции</p>
+                        </a>
+                    </div>
+                </ul>
+            </nav>
+        </aside>
+        <!-- Главная -->
+        <main class="main">
+            <!-- Header -->
+            <header class="header">
+                <!-- Mobile Header логотип -->    
+                <img class="header__logo-mobile" src="./images/logo.png" alt="ROMSEM Логотип">
+                <div class="header__phones-regime">
+                    <!-- Шапка телефоны -->
+                    <div class="header__phones">
+                        <!-- Шапка телефоны текст -->
+                        <p class="header-phones__text">Наш телефон</p>
+                        <!-- Шапка телефон 1 -->
+                        <a class="header__phone" href="tel:+996705188955">  +996 705     188 955</a>
+                        <!-- Шапка телефон 2 -->
+                        <a class="header__phone" href="tel:+996555188955">  +996 555     188 955</a>
+                    </div>
+                    <!-- Шапка режим работы -->
+                    <div class="header__regime">
+                        <img src="./images/icons/regime.svg" alt="Режим     работы">
+                        <p>работаем с 10:00 до 00:00</p>
+                    </div>
+                </div>
+                <!-- Шапка инфо -->
+                <div class="header__info">
+                    <!-- Шапка город -->
+                    <div class="header__city">
+                        <p class="city">Город:</p>
+                        <a href="#" class="current__city">Бишкек</a>
+                    </div>
+                    <!-- Шапка ссылки -->
+                    <div class="header__links">
+                        <!-- Шапка отзывы -->
+                        <a href="#" class="header__feedback">Отзывы</a>
+                        <!-- Шапка доставка и оплата -->
+                        <a href="#" class="header__delivery-pay">Доставка и     оплата</a>
+                    </div>
+                </div>
+                <!-- Шапка поиск -->
+                <form class="header__search"> 
+                    <input class="search__input"  type="text" placeholder="Искать здесь...">
+                    <img class="search__image" src="./images/icons/search.svg" alt="Поиск">
+                </form>
+                <!-- Шапка корзина -->
+                <a href="#" class="header__cart">
+                    <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.49998 30.25C6.24888 30.25 7.66665 28.8322 7.66665 27.0833C7.66665 25.3344 6.24888 23.9167 4.49998 23.9167C2.75108 23.9167 1.33331 25.3344 1.33331 27.0833C1.33331 28.8322 2.75108 30.25 4.49998 30.25Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.9167 30.25C23.6656 30.25 25.0833 28.8322 25.0833 27.0833C25.0833 25.3344 23.6656 23.9167 21.9167 23.9167C20.1678 23.9167 18.75 25.3344 18.75 27.0833C18.75 28.8322 20.1678 30.25 21.9167 30.25Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.9166 23.9167H4.49998V1.75H1.33331" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.5 4.91666L26.6667 6.49999L25.0833 17.5833H4.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </header>
+            <!-- Контент -->
+            <div class="main__container">
+                <!-- Баннер-слайдер на главной -->
+                <div class="main-banner">
+                    <div class="main-banner__slider">
+                        <!-- Баннер-слайдер слайд 1 -->
+                        <div class="main-banner__item">
+                            <img src="./images/main-slider/slide_1.png"     alt="Филадельфия и лосось">
+                            <button class="main-banner__button">Хочу!</button>
+                        </div>
+                        <!-- Баннер-слайдер слайд 2 -->
+                        <div class="main-banner__item">
+                            <img src="./images/main-slider/slide_1.png"     alt="Филадельфия и лосось">
+                            <button class="main-banner__button">Хочу!</button>
+                        </div>
+                        <!-- Баннер-слайдер слайд 3 -->
+                        <div class="main-banner__item">
+                            <img src="./images/main-slider/slide_1.png"     alt="Филадельфия и лосось">
+                            <button class="main-banner__button">Хочу!</button>
+                        </div>
+                        <!-- Баннер-слайдер слайд 4 -->
+                        <div class="main-banner__item">
+                            <img src="./images/main-slider/slide_1.png"     alt="Филадельфия и лосось">
+                            <button class="main-banner__button">Хочу!</button>
+                        </div>
+                        <!-- Баннер-слайдер слайд 6 -->
+                        <div class="main-banner__item">
+                            <img src="./images/main-slider/slide_1.png"     alt="Филадельфия и лосось">
+                            <button class="main-banner__button">Хочу!</button>
+                        </div>
+                        <!-- Баннер-слайдер слайд 7 -->
+                        <div class="main-banner__item">
+                            <img src="./images/main-slider/slide_1.png"     alt="Филадельфия и лосось">
+                            <button class="main-banner__button">Хочу!</button>
+                        </div>
+                    </div>
+                    <!-- Баннер-слайдер точки -->
+                    <div class="main-banner__dots">
+                    </div>
+                </div>
+                <!-- Карточки меню -->
+                <div class="menu__cards">
+                    <!-- Карточка меню Чикен -->
+                    <a href="#" class="menu__card card__chiken_big">
+                        <p class="card__text">Чикен</p>
+                    </a>
+                    <!-- Карточка меню Угорь -->
+                    <a href="#" class="menu__card card__eel">
+                        <p class="card__text">Угорь</p>
+                    </a>
+                    <!-- Карточка меню Корн дог -->
+                    <a href="#" class="menu__card card__corndog">
+                        <p class="card__text">Корн дог</p>
+                    </a>
+                    <!-- Карточка меню Пицца -->
+                    <a href="#" class="menu__card card__pizza">
+                        <p class="card__text">Пицца</p>
+                    </a>
+                    <!-- Карточка меню Пицца большая -->
+                    <a href="#" class="menu__card card__pizza_big">
+                        <p class="card__text">Пицца</p>
+                    </a>
+                    <!-- Карточка меню Акции -->
+                    <a href="#" class="menu__card card__sales_big">
+                        <p class="card__text">Акции</p>
+                    </a>
+                    <!-- Карточка меню Сеты -->
+                    <a href="#" class="menu__card card__sets">
+                        <p class="card__text">Сеты</p>
+                    </a>
+                    <!-- Карточка меню Wok -->
+                    <a href="#" class="menu__card card__wok">
+                        <p class="card__text">Wok</p>
+                    </a>
+                    <!-- Карточка меню Роллы -->
+                    <a href="#" class="menu__card card__rolls">
+                        <p class="card__text">Роллы</p>
+                    </a>
+                    <!-- Карточка меню Суши -->
+                    <a href="#" class="menu__card card__sushi">
+                        <p class="card__text">Суши</p>
+                    </a>
+                    <!-- Карточка меню Комбо -->
+                    <a href="#" class="menu__card card__combos_big">
+                        <p class="card__text">Комбо</p>
+                    </a>
+                    <!-- Карточка меню Супы -->
+                    <a href="#" class="menu__card card__soups">
+                        <p class="card__text">Супы</p>
+                    </a>
+                    <!-- Карточка меню Салаты -->
+                    <a href="#" class="menu__card card__salads">
+                        <p class="card__text">Салаты</p>
+                    </a>
+                    <!-- Карточка меню Напитки -->
+                    <a href="#" class="menu__card card__drinks">
+                        <p class="card__text">Напитки</p>
+                    </a>
+                </div>
+                <!-- Слайдер Новинки -->
+                <div class="news-slider">
+                    <div class="news-slider__header">
+                        <h4>Новинки</h4>
+                        <a href="#">Популярное</a>
+                    </div>
+                    <!-- Слайдер Новинки Row -->
+                    <div class="news-slider__row">
+                      <!-- Слайдер Новинки Items -->
+                      <div class="news-slider__items">
+                        <!-- Слайдер Новинки Item 1 -->
+                        <div class="news-slider__item">
+                            <div class="news-slider__info">
+                                <a href="#" class="news-slider__image">
+                                    <img src="./images/news/news_1.png"     alt="Саломон сет">
+                                </a>
+                                <h4 class="news-slider__name">Саломон сет</h4>
+                                <p class="news-slider__size">1050 грамм, 30     кусочков</p>
+                            </div>
+                            <div class="news-slider__order">
+                                <p class="news-slider__price">1500 СОМ</p>
+                                <button class="news-slider__button">Хочу!</ button>
+                            </div>
+                        </div>
+                        <!-- Слайдер Новинки Item 2 -->
+                        <div class="news-slider__item">
+                            <div class="news-slider__info">
+                                <a href="#" class="news-slider__image">
+                                    <img src="./images/news/news_1.png"     alt="Филадельфия и 
+                                    лосось сет">
+                                </a>
+                                <h4 class="news-slider__name">Филадельфия и 
+                                    лосось сет</h4>
+                                <p class="news-slider__size">1260 грамм, 36     кусочков</p>
+                            </div>
+                            <div class="news-slider__order">
+                                <p class="news-slider__price">1150 СОМ</p>
+                                <button class="news-slider__button">Хочу!</ button>
+                            </div>
+                        </div>
+                        <!-- Слайдер Новинки Item 3 -->
+                        <div class="news-slider__item">
+                            <div class="news-slider__info">
+                                <a href="#" class="news-slider__image">
+                                    <img src="./images/news/news_1.png" alt="Самая  большая Филадельфия">
+                                </a>
+                                <h4 class="news-slider__name">Самая большая     Филадельфия</h4>
+                                <p class="news-slider__size">2050 грамм, 45     кусочков</p>
+                            </div>
+                            <div class="news-slider__order">
+                                <p class="news-slider__price">2100 СОМ</p>
+                                <button class="news-slider__button">Хочу!</ button>
+                            </div>
+                        </div>
+                        <!-- Слайдер Новинки Item 4 -->
+                        <div class="news-slider__item">
+                            <div class="news-slider__info">
+                                <a href="#" class="news-slider__image">
+                                    <img src="./images/news/news_1.png"     alt="Саломон сет">
+                                </a>
+                                <h4 class="news-slider__name">Саломон сет</h4>
+                                <p class="news-slider__size">1050 грамм, 30     кусочков</p>
+                            </div>
+                            <div class="news-slider__order">
+                                <p class="news-slider__price">1500 СОМ</p>
+                                <button class="news-slider__button">Хочу!</ button>
+                            </div>
+                        </div>
+                        <!-- Слайдер Новинки Item 5 -->
+                        <div class="news-slider__item">
+                            <div class="news-slider__info">
+                                <a href="#" class="news-slider__image">
+                                    <img src="./images/news/news_1.png"     alt="Филадельфия и 
+                                    лосось сет">
+                                </a>
+                                <h4 class="news-slider__name">Филадельфия и 
+                                    лосось сет</h4>
+                                <p class="news-slider__size">1260 грамм, 36     кусочков</p>
+                            </div>
+                            <div class="news-slider__order">
+                                <p class="news-slider__price">1150 СОМ</p>
+                                <button class="news-slider__button">Хочу!</ button>
+                            </div>
+                        </div>
+                        <!-- Слайдер Новинки Item 6 -->
+                        <div class="news-slider__item">
+                            <div class="news-slider__info">
+                                <a href="#" class="news-slider__image">
+                                    <img src="./images/news/news_1.png" alt="Самая  большая Филадельфия">
+                                </a>
+                                <h4 class="news-slider__name">Самая большая     Филадельфия</h4>
+                                <p class="news-slider__size">2050 грамм, 45     кусочков</p>
+                            </div>
+                            <div class="news-slider__order">
+                                <p class="news-slider__price">2100 СОМ</p>
+                                <button class="news-slider__button">Хочу!</ button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Слайдер Новинки Buttons -->
+                    <div class="news-slider__buttons">
+                      <!-- Слайдер Новинки Button Prev -->
+                      <div class="news-slider__prev"></div>
+                      <!-- Слайдер Новинки Button Next -->
+                      <div class="news-slider__next"></div>
+                    </div>
+                </div>
+                <!-- Информация -->
+                <div class="main__info">
+                    <h2 class="info__header">Заказать суши в Бишкеке</h2>
+                    <article class="info__article">
+                        <p class="info__text">Ресторан “Суши и Лапша” предлагаем    своим клиентам самые вкусные суши с доставкой на дом,  приготовленные по классическим и адаптированным к    европейской аудитории рецептам, а также собственным    наработкам наших поваров. Мы ценим время наших клиентов,   поэтому вы можете заказать суши в Харькове с доставкой на     дом или в офис.</p>
+                        <figure>
+                            <figcaption class="info__caption">В нашем меню  более 20     видов суши:</figcaption>
+                            <ul class="info__list">
+                                <li>Классические с сырым лососем, тунцом,   окунем.</ li>
+                                <li>Экзотические с тигровой креветкой,  морским  гребешком.</li>
+                                <li>Пикантные с копченым лососем, угрем.</li>
+                            </ul>
+                        </figure>
+                        <p class="info__text">В меню также представлены     гунканы: с  начинкой из красной икры и тобико, а    также феликсы, где  японский майонез сочетается с  рыбой, морепродуктами, угрем.  Любители острых блюд  могут купить суши с соусом спайси.  Популярные   начинки — копченая курица, снежный краб,  креветки,   гребешки, тунец, лосось и окунь.</p>
+                    </article>
+                    <div class="info__blur"></div>
+                    <p class="info__more">Подробнее</p>
+                </div>
+                <!-- Footer -->
+                <footer class="footer">
+                    <!-- Footer Ссылки -->
+                    <ul class="footer__list">
+                        <li class="footer__link">
+                            <a href="#">О компании</a>   
+                        </li>
+                        <li class="footer__link">
+                            <a href="#">Доставка и оплата</a>
+                        </li>
+                        <li class="footer__link">
+                            <a href="#">Лента материалов</a>
+                        </li>
+                        <li class="footer__link">
+                            <a href="#">Политика возврата</a>
+                        </li>
+                    </ul>
+                    <!-- Footer Заказать звонок -->
+                    <form class="footer__callback">
+                        <!-- Footer Заказать звонок Введите номер -->
+                        <label for="callback" class="callback__label">Введите номер</label>
+                        <input type="tel" name="callback" class="callback__input" placeholder="+996 (__) ___ __ __">
+                        <!-- Footer Заказать звонок Соцсети -->
+                        <label for="callback__social"       class="callback-social__label">Выберите удобный     мессенджер для общения</label>
+                        <div class="callback-social__links">
+                            <!-- Footer Заказать звонок Ватсап -->
+                            <a href="#" class="callback-social__link">
+                                <img src="./images/icons/whatsapp.png"      alt="Whatsapp">
+                            </a>
+                            <!-- Footer Заказать звонок Телеграм -->
+                            <a href="#" class="callback-social__link">
+                                <img src="./images/icons/telegram.png"      alt="Telegram">
+                            </a>
+                            <!-- Footer Заказать звонок Инстаграм -->
+                            <a href="#" class="callback-social__link">
+                                <img src="./images/icons/instagram.png"         alt="Instagram">
+                            </a>
+                        </div>
+                    </form>
+                    <!-- Footer Телефоны адрес -->
+                    <div class="footer__contacts">
+                        <p class="footer__phone">Тел:<a href="tel:  +996705188955">   +996 705 188 955</a></p>
+                        <p class="footer__phone">Тел:<a href="tel:  +996555188955">   +996 555 188 955</a></p>
+                        <p class="footer__adress">Адрес:Бакаева 126</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+        <!-- Mobile Footer Nav -->
+        <nav class="mobile-footer__nav">
+            <a href="#" class="mobile-footer__link">
+                <img src="./images/icons/mobile_menu.svg" alt="Меню">
+                <span class="mobile-footer__text">Меню</span>
+            </a>
+            <a href="#" class="mobile-footer__link">
+                <img src="./images/icons/mobile.cart.svg" alt="Корзина">
+                <span class="mobile-footer__text">Корзина</span>
+            </a>
+            <a href="#" class="mobile-footer__link">
+                <img src="./images/icons/mobile_feedback.svg" alt="Отзывы">
+                <span class="mobile-footer__text">Отзывы</span>
+            </a>
+        </nav>
+        <!-- Корзина -->
+        <aside class="cart">
+            <div class="cart__block">
+                <h4 class="cart__header">Ваша корзина пуста.</h4>
+                <p class="cart__text">Добавьте же скорее что-нибудь!</p>
+                <button class="cart__button">Бесплатная доставка от 800 СОМ</   button>
+            </div>
+            <div class="cart__map">
+                <div class="map__api"></div>
+                <h4 class="map__header">Укажите адрес</h4>
+                <p class="map__text">И узнайте время доставки</p>
+                <div class="map__loc-icon"></div>
+            </div>
+        </aside>
+    </div> 
+    <script src="./scripts/banner_slider.js"></script>  
+    <script src="./scripts/news_slider.js"></script>
+    <script src="./scripts/info_showText.js"></script>
+    <script src="./scripts/header_search.js"></script>
+</body>
+</html>

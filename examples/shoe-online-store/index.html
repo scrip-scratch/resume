@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Online Shoe Store</title>
+    <link rel="stylesheet" href="./styles/normalize.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/media.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <header class="header">
+            <!-- Header Logo -->
+            <a href="./index.html" class="header__logo">Fashion</a>
+            <!-- Header Nav -->
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li><a href="#" class="header__link">Men</a></li>
+                    <li><a href="#" class="header__link">Women</a></li>
+                    <li><a href="#" class="header__link">Accessories</a></li>
+                    <li><a href="#" class="header__link">Personal Care</a></li>
+                </ul>
+                <div class="header-nav__close">
+                    <div class="close_1"></div>
+                    <div class="close_2"></div>
+                </div>
+            </nav>
+            <!-- Header Search -->
+            <form action="#" class="header__search">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__button" type="submit"></button>
+            </form>
+            <!-- Header Cart -->
+            <div class="header__cart">
+                <a href="#">
+                    <img src="./images/icons/cart.svg" alt="Cart">
+                </a>
+            </div>
+            <!-- Header Burger -->
+            <div class="header__burger">
+                <div class="burger_1"></div>
+                <div class="burger_2"></div>
+                <div class="burger_3"></div>
+            </div>
+        </header>
+        <!-- Aside Links -->
+        <aside class="social">
+            <ul class="social__links">
+                <li><a href="" class="social__link">Facebook</a></li>
+                <li><a href="" class="social__link">Instagram</a></li>
+                <li><a href="" class="social__link">Twitter</a></li>
+            </ul>
+        </aside>
+        <!-- Main -->
+        <main>
+            <!-- Item Card -->
+            <section class="item-card" aria-label="Product Card">
+                <!-- Item Info -->
+                <div class="item__info">
+                    <!-- Item Header -->
+                    <h3 class="item__brand">Original</h3>
+                    <!-- Item Name -->
+                    <h3 class="item__name">Premium Sneaker</h3>
+                    <!-- Item Desc -->
+                    <p class="item_desc">Sneakers are shoes primarily designed for sports or other forms of physical exercise</p>
+                    <!-- Item Prices -->
+                    <div class="item__prices">
+                        <p class="item__new-price">$149.00</p>
+                        <p class="item__old-price">$179.00</p>
+                    </div>
+                    <!-- Item Button Add to Cart -->
+                    <button class="item__add-btn">Add to cart</button>
+                </div>
+                <!-- Item Image -->
+                <div class="item__image">
+                    <img src="./images/item_image.png" alt="" class="">
+                </div>
+                <!-- Item Link -->
+                <a href="#" class="item__link">See all</a>
+            </section>
+            <!-- New Arrivals -->
+            <section class="new-arr" aria-label="New Arrivals">
+                <h4 class="new-arr__header">New Arrivals</h4>
+                <!-- New Arrivals Slider -->
+                <div class="new-arr__slider">             
+                    <div class="new-arr__row new-arr__row_animated">
+                        <!-- New Arrivals Item -->
+                        <div class="new-arr__item">
+                            <!-- New Arrivals Image -->
+                            <div class="new-arr__image">
+                                <img src="./images/new_arrivals.png" alt="All Star">
+                            </div>
+                            <!-- New Arrivals Info -->
+                            <div class="new-arr__info">
+                                <!-- New Arrivals Name -->
+                                <h4 class="new-arr__name">All Star 1</h4>
+                                <!-- New Arrivals Category -->
+                                <p class="new-arr__category">Sneakers</p>
+                                <!-- New Arrivals Price -->
+                                <p class="new-arr__price">$159.00</p>
+                                <!-- New Arrivals Button Add to Cart -->
+                                <button class="new-arr__add-btn">Add to cart</button>
+                            </div>
+                        </div>
+                        <!-- New Arrivals Item -->
+                        <div class="new-arr__item">
+                            <!-- New Arrivals Image -->
+                            <div class="new-arr__image">
+                                <img src="./images/new_arrivals.png" alt="All Star">
+                            </div>
+                            <!-- New Arrivals Info -->
+                            <div class="new-arr__info">
+                                <!-- New Arrivals Name -->
+                                <h4 class="new-arr__name">All Star 2</h4>
+                                <!-- New Arrivals Category -->
+                                <p class="new-arr__category">Sneakers</p>
+                                <!-- New Arrivals Price -->
+                                <p class="new-arr__price">$159.00</p>
+                                <!-- New Arrivals Button Add to Cart -->
+                                <button class="new-arr__add-btn">Add to cart</button>
+                            </div>
+                        </div>
+                        <!-- New Arrivals Item -->
+                        <div class="new-arr__item">
+                            <!-- New Arrivals Image -->
+                            <div class="new-arr__image">
+                                <img src="./images/new_arrivals.png" alt="All Star">
+                            </div>
+                            <!-- New Arrivals Info -->
+                            <div class="new-arr__info">
+                                <!-- New Arrivals Name -->
+                                <h4 class="new-arr__name">All Star 3</h4>
+                                <!-- New Arrivals Category -->
+                                <p class="new-arr__category">Sneakers</p>
+                                <!-- New Arrivals Price -->
+                                <p class="new-arr__price">$159.00</p>
+                                <!-- New Arrivals Button Add to Cart -->
+                                <button class="new-arr__add-btn">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Arrivals Slider Button -->
+                <button class="new-arr__slider-button"></button>
+            </section>
+        </main>
+    </div>  
+    <script src="./scripts/newArrSlider.js"></script>
+    <script src="./scripts/burger.js"></script>
+    <script src="./scripts/searchForm.js"></script>
+</body>
+</html>
