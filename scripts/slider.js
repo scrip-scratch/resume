@@ -71,8 +71,6 @@ function sliderAction (slider, sliderItem, dots) {
   function dragStart (e) {
     initialPos = slider.offsetLeft;
     posX1 = e.touches[0].clientX;
-    document.onmouseup = dragEnd;
-    document.onmousemove = dragAction;
   }
 
   function dragAction (e) {
@@ -93,9 +91,6 @@ function sliderAction (slider, sliderItem, dots) {
     }
     posX1 = null;
     posX2 = null;
-
-    document.onmouseup = null;
-    document.onmousemove = null;
   }
   
 }
