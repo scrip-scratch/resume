@@ -7,8 +7,8 @@ function sliderAction (slider, sliderItem, dots) {
   let sliderOffset = slider.offsetLeft;
   let sliderLength = slider.children.length;
   let slideWidth = sliderItem.offsetWidth;
-  let posInitial, posFinal, posX1 = 0, posX2 = 0;
-  let threshold = slideWidth / 15;
+  let posX1 = null, posX2 = null;
+  let initialPos = 0;
   let index = 0;
   
   addDots();
@@ -63,38 +63,36 @@ function sliderAction (slider, sliderItem, dots) {
       slider.style.left = sliderOffset + 'px';
     }, 300)
   })
-
-  slider.onmousedown = dragStart;
   
   slider.addEventListener('touchstart', dragStart);
   slider.addEventListener('touchmove', dragAction);
   slider.addEventListener('touchend', dragEnd);
    
   function dragStart (e) {
-    e.preventDefault();
-    posInitial = slider.offsetLeft;
-    posX1 = e.changedTouches[0].clientX;
+    initialPos = slider.offsetLeft;
+    posX1 = e.touches[0].clientX;
     document.onmouseup = dragEnd;
     document.onmousemove = dragAction;
   }
 
   function dragAction (e) {
-    posX2 = posX1 - e.changedTouches[0].clientX;
-    posX1 = e.changedTouches[0].clientX;
-    console.log(posX2);
-    slider.style.left = (slider.offsetLeft - posX2 * 8) + "px";
+    if (!posX1) return;
+
+    posX2 = e.touches[0].clientX;
+    slider.style.left = (sliderOffset + (posX2 - posX1)) + "px";
   }
   
   function dragEnd () {
-    posFinal = slider.offsetLeft;
-    console.log(posFinal);
-    if ((posFinal - posInitial < -threshold) && (index < sliderLength - 1)) {
+    let xDiff = posX1 - posX2;
+    if ((xDiff > 0) && (index < sliderLength - 1)) {
       move(1);
-    } else if ((posFinal - posInitial > threshold) && (index > 0)) {
+    } else if ((xDiff < 0) && (index > 0)) {
       move(-1);
     } else {
-      slider.style.left = (posInitial) + "px";
+      slider.style.left = (initialPos) + "px";
     }
+    posX1 = null;
+    posX2 = null;
 
     document.onmouseup = null;
     document.onmousemove = null;
