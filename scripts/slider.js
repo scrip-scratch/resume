@@ -69,11 +69,16 @@ function sliderAction (slider, sliderItem, dots) {
   slider.addEventListener('touchend', dragEnd);
    
   function dragStart (e) {
+    e = e || window.event;
+    e.preventDefault();
     initialPos = slider.offsetLeft;
     posX1 = e.touches[0].clientX;
+    document.onmouseup = dragEnd;
+    document.onmousemove = dragAction;
   }
 
   function dragAction (e) {
+    e = e || window.event;
     if (!posX1) return;
 
     posX2 = e.touches[0].clientX;
@@ -91,6 +96,8 @@ function sliderAction (slider, sliderItem, dots) {
     }
     posX1 = null;
     posX2 = null;
+    document.onmouseup = null;
+    document.onmousemove = null;
   }
   
 }
