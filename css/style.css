@@ -437,6 +437,12 @@ a {
   .gd .gd_skills {
     width: 100%; } }
 
+@media (max-width: 420px) {
+  .hello .hello_cards .cards_slider .card {
+    padding: 2.5rem;
+    font-size: 1.4rem;
+    gap: 1rem; } }
+
 .loader_wrap {
   position: absolute;
   top: 0;
