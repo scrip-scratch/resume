@@ -55,29 +55,29 @@
                 <!-- Hello Section Cards -->
                 <div class="hello_cards">
                     <!-- Hello Section Cards Slider -->
-                    <div class="cards_slider">
-                        <div class="cards_row">
+                    <div class="cards_slider swiper mySwiper">
+                        <div class="cards_row swiper-wrapper">
                             <!-- Hello Section Card -->
-                            <div class="card">
+                            <div class="card swiper-slide">
                                 <h4 class="card_header">Салют! Меня зовут Сергей Жвакин.</h4>
                                 <p class="card_text">Я ищу работу верстальщиком / frontend-разработчиком.</p>
                                 <p class="card_text">Веб-разработкой интересуюсь с 2020 года. </br>Умею верстать, писать стили и скрипты.</p>
                                 <p class="card_text">Подробнее о моих навыках <a class="card_link_skills" href="#">тут</a>.</p>
                             </div>
                             <!-- Hello Section Card -->
-                            <div class="card">
+                            <div class="card swiper-slide">
                                 <h4 class="card_header">Хочу работать в команде.</h4>
                                 <p class="card_text">Хочу интересные и нужные проекты, коллег-профессионалов и код-ревью. Хочу работать и развиваться.</p>
                                 <p class="card_text">Опыта работы в компании в данной сфере ещё не имею. Есть опыт в графическом <a class="card_link_gd" href="#" >дизайне</a>. Закончил курс от SkillFactory по веб-разработке.</p>
                             </div>
                             <!-- Hello Section Card -->
-                            <div class="card">
+                            <div class="card swiper-slide">
                                 <h4 class="card_header">Кем вижу себя через 5 лет.</h4>
                                 <p class="card_text">Уже начал изучение React и NodeJS и даже веду свой <a target="_blank" href="https://github.com/scrip-scratch/condition-app">пэт-проект</a>. Но прежде хочу год в верстке, для практики и понимания рабочих процессов.</p>
                                 <p class="card_text">Далее 2-3 года на работу с фронтенд-фреймворками и изучение серверной части. Далее по результатам.</p>
                             </div>
                             <!-- Hello Section Card -->
-                            <div class="card">
+                            <div class="card swiper-slide">
                                 <h4 class="card_header">Уверен в неизбежности успеха.</h4>
                                 <p class="card_text">Себя и компании, в которой буду работать.</p>
                                 <p class="card_text">Люблю работать, нравится сфера, вижу пользу для людей</p>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                      <!-- Hello Section Cards Dots -->
-                     <div class="cards_dots">
+                     <div class="swiper-pagination">
                      </div>
                 </div>
             </section>
@@ -274,7 +274,10 @@
             </div>
         </footer>
     </div>
-    <script src="./scripts/slider.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./scripts/swiper.js"></script>
+    <!-- Scripts -->
     <script src="./scripts/soft_scroll.js"></script>
     <script src="./scripts/side_menu.js"></script>
     <script src="./scripts/image_view.js"></script>
